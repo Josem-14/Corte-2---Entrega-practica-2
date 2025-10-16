@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string titcolum;
+    int result = 0;
+    int num = 0;
+    int i = 0;
+
+    cout << "Ingrese el titulo de la columna(En mayusculas): ";
+    cin >> titcolum;
+
+    while (titcolum[i] != '\0') {
+        num = titcolum[i] - 'A' + 1; 
+        result = result * 26 + num;
+        i++;
+    }
+
+    cout << "El numero de la columna: " << result << endl;
+    return 0;
+}
